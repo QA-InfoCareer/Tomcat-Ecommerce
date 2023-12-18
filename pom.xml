@@ -13,6 +13,7 @@
 	<artifactId>MyShopping</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MyShopping</name>
+	<packaging>war</packaging>
 	<description>shopping application</description>
 	<properties>
 		<java.version>17</java.version>
@@ -95,6 +96,13 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-api</artifactId>
@@ -122,6 +130,9 @@
 	</dependencies>
 
 	<build>
+	
+	 <finalName>Ecommercesample</finalName>
+	
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -134,6 +145,7 @@
 			</plugin>
 		</plugins>
 	</build>
+	
 
 	<dependencyManagement>
 		<dependencies>
