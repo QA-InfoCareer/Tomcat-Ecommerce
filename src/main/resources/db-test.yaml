@@ -1,0 +1,11 @@
+api:
+   host=9090 
+   userName=naveen test
+   password=i dont know default profile
+   list.value=one,two,three,four
+   
+env:
+    myAppName:myshopping
+
+
+

@@ -1,0 +1,436 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title> JQuery left side menu </title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+	<script src="js/Home.js"></script>
+	<!--for bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	
+    <link rel="stylesheet" href="css/Home.css">
+</head>
+
+<body>
+	<div class="header">
+		<div class="left-head">
+			<div class="logo">
+
+			</div>
+
+			<h6 id="username"></h6>
+			<a href="#" class="toggle-nav"> ||| </a>
+		</div>
+		<!-- dropdown for product start-->
+	<div class="filter-product">
+			<select id="dropdown4">
+			<option value="All">All</option>
+				<option value="Phone">Phone</option>
+				<option value="Laptop">Laptop</option>
+				<option value="Tab">Tab</option>
+			</select>
+		</div>
+		<!-- dropdown for product e-->
+		<!-- filter for brand start-->
+		<div class="filter-brand">
+			<select id="dropdown3">
+			<option value="All">All</option>
+				<option value="Apple">Apple</option>
+				<option value="Redmi">Redmi</option>
+				<option value="Realme">Realme</option>
+				<option value="Oppo">Oppo</option>
+			</select>
+		</div>
+		<!-- fileter for brand end -->
+		<div class="profile-card">
+			<select id="dropdown3">		
+				<option value="demo">Demo</option>					
+				<option value="Account">Account</option>
+				<option value="Change Password">Change Password</option>
+				<option value="Logout" id="logout">Logout</option>
+			</select>
+			
+		</div>
+		
+	</div>
+
+
+	<div class="nice-nav">
+		<div class="user-info clear">
+			<div class="user-name ">
+				<h5> Example </h5>
+			</div>
+		</div>
+		<ul>
+			<li class="child-menu" style="cursor:pointer;">
+				<a > <span class="" data-toggle="modal" data-target="#myModal2" data-backdrop="true">Dashboard </span> </a>
+			</li>
+			<li class="child-menu">
+				<a href="#" > <span id="myorder"> My Order </span> </a>
+			</li>
+			<li class="child-menu">
+				<a href="#" id="addcart"> <span>My Cart </span> </a>
+			</li>
+			<li class="child-menu">
+				<a href="#"> <span> Account </span> </a>
+			</li>
+			<li class="child-menu">
+				<a href="#"> <span> Setting </span> </a>
+			</li>
+		</ul>
+	</div>
+	<div class="menu-body">
+
+
+		<div class="container">
+
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg modalshowbutton" data-toggle="modal"
+				data-target="#myModal">CreateUser
+			</button>
+			<button type="button" class="btn btn-primary profileviewbutton" data-toggle="modal"
+				data-target="#viewprofile"> View Profile</button>
+			<button type="button" class="btn btn-primary productdetailsbutton" data-toggle="modal"
+				data-target="#productModal">
+				Open Product Details
+			</button>
+			<!-- dynamic return product -->
+
+			<!-- dynamic return product -->
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">User Creater</h4>
+
+						</div>
+						<div class="modal-body">
+							<div class="container mt-5">
+								<div class="row justify-content-center">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="username">Username</label>
+											<input type="text" class="form-control" id="name"
+												placeholder="Enter username">
+										</div>
+										<div class="form-group">
+											<label for="usercity">City</label>
+											<select class="form-control" id="city">
+												<option value="Ariyalur">Ariyalur</option>
+												<option value="Chengalpattu">Chengalpattu Manager</option>
+												<option value="Chennai">Chennai</option>
+												<option value="Coimbatore">Coimbatore</option>
+												<option value="Cuddalore">Cuddalore</option>
+												<option value="Dharmapuri">Dharmapuri</option>
+												<option value="Dindigul">Dindigul</option>
+												<option value="Erode">Erode</option>
+												<option value="Kallakurichi">Kallakurichi</option>
+												<option value="Kanchipuram">Kanchipuram</option>
+												<option value="Kanniyakumari">Kanniyakumari</option>
+												<option value="Karur">Karur</option>
+												<option value="Krishnagiri">Krishnagiri</option>
+												<option value="Madurai">Madurai</option>
+												<option value="Mayiladuthurai">Mayiladuthurai</option>
+												<option value="Nagapattinam">Nagapattinam</option>
+												<option value="Namakkal">Namakkal</option>
+												<option value="Nilgiris">Nilgiris</option>
+												<option value="Perambalur">Perambalur</option>
+												<option value="Pudukkottai">Pudukkottai</option>
+												<option value="Ramanathapuram">Ramanathapuram</option>
+												<option value="Ranipet">Ranipet</option>
+												<option value="Salem">Salem</option>
+												<option value="Sivagangai">Sivagangai</option>
+												<option value="Tenkasi">Tenkasi</option>
+												<option value="Thanjavur">Thanjavur</option>
+												<option value="Theni">Theni</option>
+												<option value="Thoothukudi">Thoothukudi</option>
+												<option value="Tiruchirappalli">Tiruchirappalli</option>
+												<option value="Tirunelveli">Tirunelveli</option>
+												<option value="Tirupathur">Tirupathur</option>
+												<option value="Tiruppur">Tiruppur</option>
+												<option value="produceuploader">Tiruvallur</option>
+												<option value="Tiruvannamalai">Tiruvannamalai</option>
+												<option value="Tiruvarur">Tiruvarur</option>
+												<option value="Vellore">Vellore</option>
+												<option value="Viluppuram">Viluppuram</option>
+												<option value="Virudhunagar">Virudhunagar</option>
+
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="usertype">Usertype</label>
+											<select class="form-control" id="usertype">
+												<option value="admin">Admin</option>
+												<option value="branchmanager">Branch Manager</option>
+												<option value="distributor">Distributor</option>
+												<option value="produceuploader">Produce Uploader</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="phonenum">Phone Number</label>
+											<input type="tel" class="form-control" id="phone"
+												placeholder="Enter phone number">
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" id="email"
+												placeholder="Enter email">
+										</div>
+										<div class="form-group">
+											<label for="password">Password</label>
+											<input type="password" class="form-control" id="pass"
+												placeholder="Enter password">
+										</div>
+										<div class="form-group">
+											<label for="Userpid">Userpid</label>
+											<input type="file" class="form-control" id="userpic"
+												placeholder="Select user image">
+										</div>
+										<button type="submit" class="btn btn-primary" id="submit">Submit</button>
+
+
+										<!-- user profile model -->
+										<div class="modal fade" id="viewprofile" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">User Details
+														</h5>
+														<button type="button" class="close" data-dismiss="modal"
+															aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<div class="form-group">
+															<label for="name">Name</label>
+															<input type="text" class="form-control" id="pname" value=""
+																readonly>
+														</div>
+														<div class="form-group">
+															<label for="city">City</label>
+															<input type="text" class="form-control" id="pcity" value=""
+																readonly>
+														</div>
+														<div class="form-group">
+															<label for="RoleType">RoleType</label>
+															<input type="tel" class="form-control" id="proletype"
+																value="" readonly>
+														</div>
+														<div class="form-group">
+															<label for="phone">Phone</label>
+															<input type="tel" class="form-control" id="phone" value=""
+																readonly>
+														</div>
+														<div class="form-group">
+															<label for="email">Email</label>
+															<input type="email" class="form-control" id="pemail"
+																value="" readonly>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<!-- Support Links -->
+														<a href="#">Terms of Service</a>
+														<a href="#">Privacy Policy</a>
+														<button type="button" class="btn btn-secondary"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- user profile model -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product-thmnail" style="display:flex; flex-wrap: wrap; width:100%; height:100%; position: absolute;">
+
+			</div>
+			<!-- product upload -->
+
+			<!-- Product Details Modal -->
+			<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-center" id="productModalLabel">Product Details Upload</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body" st="overflow:hidden;">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="productName">Name</label>
+									<input type="text" class="form-control" id="productName">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productPrice">Price</label>
+									<input type="text" class="form-control" id="productPrice">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productBattery">Battery</label>
+									<input type="text" class="form-control" id="productBattery">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productColor">Color</label>
+									<input type="text" class="form-control" id="productColor">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productRam">RAM</label>
+									<input type="text" class="form-control" id="productRam">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productStorage">Storage</label>
+									<input type="text" class="form-control" id="productStorage">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productFrontCam">Front Camera</label>
+									<input type="text" class="form-control" id="productFrontCam">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productRearCam">Rear Camera</label>
+									<input type="text" class="form-control" id="productRearCam">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productProcesser">Processer</label>
+									<input type="text" class="form-control" id="processer">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="display">DisplaySize</label>
+									<input type="text" class="form-control" id="display">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="productpic">ProductPic</label>
+									<input type="text" class="form-control" id="ProductPic">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="brand">Brand</label>
+									<input type="text" class="form-control" id="brand">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="product">Product</label>
+									<select class="form-control" id="product">
+									  <option value="Mobile">Mobile</option>
+									  <option value="Laptop">Laptop</option>
+									  <option value="Tab">Tab</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="row">
+								  <form id="excelForm">
+        <input type="file" id="excelFile" accept=".xlsx, .xls" />
+        <button type="submit">Import</button>
+    </form>
+
+    <div id="result"></div>
+								
+								
+								
+								
+								
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary" id="saveproduct">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- dashboard starts -->
+			 <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+			     <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">All user details</h4>
+        </div>
+        <div class="modal-body">
+        <button class="btn btn-priamry showallusers">Show All Users</button>
+         <div class="userdetails">
+         	<div class="table-container clearfix">
+					<table id="tableManageTag" class="table table-list ">
+						<thead>
+							<tr class="text-center">
+								<th class="text-center">name</th>
+								<th class="text-center">city</th>
+								<th class="text-center">email</th>
+								<th class="text-center">phone</th>
+								<th class="text-center">userType</th>
+							</tr>
+						</thead>
+
+					</table>
+				</div>
+         
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+        </div>
+      </div>
+      
+    </div>
+  </div>
+			<!-- dashboard end -->
+
+		<!-- profile modal   -->
+		<div class="modal fade" id="profilemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Modal Content Goes Here
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+			<!-- <img src="" style="width: 150px; height: 150px;" class="profilepicdiv" alt="null">   -->
+		
+
+
+
+		<!-- profile modal  -->
+
+
+
+
+</body>
+
+</html>

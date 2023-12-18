@@ -1,0 +1,173 @@
+
+ body {  
+  font: 14px/18px 'Montserrat', sans-serif;  
+}  
+a {  
+  text-decoration: none;  
+}  
+:after {  
+    -webkit-box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;  
+}  
+.pad-15 {  
+  padding: 15px;  
+}  
+:before {  
+    -webkit-box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;  
+}  
+.clear {  
+  clear: both;   
+}  
+.clear:after {   
+    content: " ";  
+   display: table;  
+}  
+clear:before {   
+    content: " ";  
+   display: table;  
+}
+.header {  
+  min-height: 55px;
+  background: #273135;  
+  border-bottom: 1px solid #273135; 
+  display:flex;
+  /*background-image: url("nature sun light.jpg");*/ 
+}  
+a.toggle-nav {  
+    top: 12px;  
+    right: 15px;  
+    position: absolute;  
+    color: #fff;  
+    line-height: 25px;  
+    font-size: 22px;  
+    background: #DE5939;  
+    padding: 3px 5px;  
+    border-radius: 1px;  
+    transform: rotate(90deg);  
+}  
+.header > .left-head {  
+  width: 250px;  
+  display: block;  
+  background:#20282B;  
+  position: relative;  
+}  
+
+.header > .left-head .logo {  
+  padding:10px 0px 10px 15px;  
+ }  
+.nice-nav {  
+  width: 200px;  
+  background: #20282b;  
+  height: 100%;  
+  transition: all 0.4s ease-in-out 0s;  
+  float: left;  
+}  
+.nice-nav.open {  
+    margin-left: -250px;  
+    display: block;  
+}  
+.nice-nav > .user-info {  
+    padding: 10px 15px;  
+    color: #fff;  
+    border-bottom: 1px solid #ddd;  
+    min-height: 41px;  
+}  
+.user-info > .user-name h5 {  
+  text-transform: uppercase;  
+  font-size: 16px;  
+}  
+.user-info > .user-name span {  
+  font-size: 80%;  
+  color: #555;  
+  font-style: italic;  
+}  
+.nice-nav li.child-menu span.toggle-right {  
+  text-align: right;  
+  float: right;  
+  display: inline-block;  
+  position: absolute;  
+  right: 0;  
+  padding: 15px;  
+  top: 0;  
+  background: #DE5939;  
+  bottom: 0;  
+}  
+.nice-nav ul li a {  
+  padding: 12px;  
+  background: #273135;  
+  border-bottom: 1px solid #ddd;  
+  display: block;  
+  color: #fff;  
+  position: relative;  
+}  
+.nice-nav ul li.child-menu ul {  
+  background: #aaa;  
+  display: none;  
+}  
+.nice-nav ul li.child-menu ul li a {  
+  background: #273135;  
+  padding: 10px 20px;  
+}  
+.left-head h6{
+	font-size:40px;
+	color: #fff;
+	margin-top:3px;
+	margin-left:5px;
+}
+.menu-body{
+	width:100%;
+	height:100%;
+	background-color:#ddd;
+	border:1px solid #aaa;;
+}
+#profile-circle,#profile-detail {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  right: 20px;
+  float: right;
+  margin-top: -49px;
+  border:1px solid white;
+  
+}
+
+.profile-card{
+	margin-right:5px;
+	display: flex;
+	width:80%;
+	justify-content: flex-end;
+	border:1px solid #273135;
+	
+}
+
+/*-----------*/
+.filter-product{
+	
+
+	margin-left:5px;
+	display: flex;
+	position:sticky;
+	width:100px;
+	justify-content: space-between;
+	border:1px solid #273135;
+}
+.filter-brand{
+	margin-left:5px;
+	display: flex;
+	position:static;
+	width:100px;
+	border:1px solid #273135;
+}
+/*----------*/
+#dropdown3
+{
+	border-radius: 84px;
+background: #fffafa;
+box-shadow: inset 12px 12px 25px #e0dcdc,
+            inset -12px -12px 25px #ffffff;
+}
